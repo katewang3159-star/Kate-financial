@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { PlaneTakeoff, TrendingDown, WalletCards } from 'lucide-react';
+import { TrendingUp, TrendingDown, WalletCards } from 'lucide-react';
 
 const PainPoints: React.FC = () => {
   const points = [
     {
-      icon: <PlaneTakeoff className="w-9 h-9" />,
-      title: "想出國就出國？",
-      desc: "是否希望能有一筆錢，讓妳隨時想出國就能出國？阿蓉教妳如何從小錢開始，有節奏地存出妳的夢想旅遊金。",
+      icon: <TrendingUp className="w-9 h-9" />,
+      title: "通膨讓錢變薄了？",
+      desc: "物價一年比一年貴，單純存錢已經無法守護妳的購買力。阿蓉幫妳建立抗通膨資產配置，讓妳的每一分辛苦錢不再悄悄縮水。",
       bgColor: 'bg-morandi-lightBlue',
       iconColor: 'text-morandi-blue'
     },

@@ -37,21 +37,22 @@ const Solutions: React.FC = () => {
   ];
 
   return (
-    <section id="planning" className="py-24 bg-white">
+    <section id="planning" className="py-32 bg-white">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-20">
-          <span className="text-finance-gold font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Our Expertise</span>
-          <h2 className="text-3xl md:text-5xl font-bold text-finance-navy">專業規劃服務<br/><span className="font-light text-finance-slate">滿足人生各階段需求</span></h2>
+          <span className="text-morandi-gold font-bold tracking-[0.4em] uppercase text-xs mb-4 block">Our Expertise</span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-morandi-darkBlue">專業規劃服務<br/><span className="font-light text-morandi-blue">滿足人生各階段需求</span></h2>
+          <div className="w-12 h-1 bg-morandi-gold/30 mx-auto mt-6 rounded-full"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="p-8 rounded-2xl border border-finance-navy/5 hover:border-finance-gold/30 hover:shadow-xl transition-all duration-500 bg-[#F7FAFC]">
-              <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-finance-gold mb-6">
+            <div key={index} className="group p-10 rounded-[2rem] border border-morandi-oat/50 hover:border-morandi-blue/30 hover:shadow-2xl hover:shadow-morandi-blue/5 transition-all duration-500 bg-morandi-cream/30">
+              <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-morandi-blue mb-8 group-hover:scale-110 transition-transform">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold mb-4 text-finance-navy">{service.title}</h3>
-              <p className="text-finance-slate text-sm font-light leading-relaxed">
+              <h3 className="text-xl font-bold mb-4 text-morandi-darkBlue">{service.title}</h3>
+              <p className="text-morandi-darkBlue/60 text-sm font-light leading-relaxed">
                 {service.desc}
               </p>
             </div>

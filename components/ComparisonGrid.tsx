@@ -1,66 +1,63 @@
 
 import React from 'react';
-import { Check, X, Shield, PieChart, Landmark, Heart, Clock, TrendingUp } from 'lucide-react';
+import { Check, X, Shield, BarChart3, Clock, Users } from 'lucide-react';
 
 const ComparisonGrid: React.FC = () => {
   const items = [
     {
-      icon: <Shield />,
-      title: "風險抵抗力",
-      pro: "即刻啟動高額保障，槓桿倍數大",
-      con: "僅有現有存款，難以應付重大意外"
+      icon: <Shield className="w-5 h-5" />,
+      title: "風險抵抗",
+      pro: "全面性的缺口診斷，確保槓桿極大化",
+      con: "隨機投保，保障重疊或存在隱形缺口"
     },
     {
-      icon: <PieChart />,
+      icon: <BarChart3 className="w-5 h-5" />,
       title: "資產配置",
-      pro: "科學配置多種幣別與工具，抗通膨",
-      con: "資產過於集中，容易被通膨侵蝕"
+      pro: "多元工具搭配，對抗通膨與市場波動",
+      con: "資產單一化，難以應對極端經濟變革"
     },
     {
-      icon: <Clock />,
-      title: "長期效益",
-      pro: "透過複利與時間，穩健達成財務目標",
-      con: "隨意消費，難以累積大筆長期資金"
+      icon: <Clock className="w-5 h-5" />,
+      title: "長期價值",
+      pro: "追蹤調整，確保規劃符合人生階段",
+      con: "買完即遺忘，無法適應人生變更需求"
     },
     {
-      icon: <Heart />,
-      title: "家人守護",
-      pro: "專款專用，即使人不在愛也會延伸",
-      con: "無明確法律安排，傳承容易產生糾紛"
+      icon: <Users className="w-5 h-5" />,
+      title: "家庭守護",
+      pro: "預留稅務與法律規劃，財富精準傳承",
+      con: "缺乏系統安排，導致財富縮水或紛爭"
     }
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-32 bg-white">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-finance-navy mb-6">為什麼您需要專業規劃？</h2>
-          <p className="text-finance-slate font-light italic text-lg">數據與邏輯的選擇，往往優於直覺。</p>
+        <div className="text-center mb-24">
+          <h2 className="text-sm font-bold tracking-[0.4em] text-morandi-blue uppercase mb-4">Value Proposition</h2>
+          <h3 className="text-3xl md:text-5xl font-serif font-bold text-morandi-darkBlue">為什麼需要專業規劃？</h3>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-12">
           {items.map((item, idx) => (
-            <div key={idx} className="bg-finance-cream p-10 rounded-3xl border border-finance-navy/5 flex flex-col md:flex-row gap-8 hover:shadow-lg transition-all">
-              <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-finance-gold flex-shrink-0">
-                {item.icon}
+            <div key={idx} className="flex flex-col">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-morandi-oat flex items-center justify-center text-morandi-darkBlue">
+                  {item.icon}
+                </div>
+                <h4 className="text-2xl font-bold text-morandi-darkBlue">{item.title}</h4>
               </div>
-              <div className="flex-grow">
-                <h3 className="text-2xl font-bold text-finance-navy mb-6">{item.title}</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <span className="text-xs font-bold text-green-600 uppercase tracking-widest block mb-1">Professional Plan</span>
-                      <p className="text-finance-navy font-medium">{item.pro}</p>
-                    </div>
+              
+              <div className="grid grid-cols-1 gap-4">
+                <div className="bg-morandi-cream p-6 rounded-2xl border-l-4 border-morandi-blue relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 p-2 opacity-10 group-hover:opacity-30 transition-opacity">
+                    <Check className="w-12 h-12 text-morandi-blue" />
                   </div>
-                  <div className="flex items-start gap-3 opacity-50">
-                    <X className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <span className="text-xs font-bold text-red-400 uppercase tracking-widest block mb-1">Traditional Way</span>
-                      <p className="text-finance-slate">{item.con}</p>
-                    </div>
-                  </div>
+                  <p className="text-morandi-darkBlue font-medium relative z-10">{item.pro}</p>
+                </div>
+                
+                <div className="bg-morandi-oat/20 p-6 rounded-2xl border-l-4 border-morandi-clay/30">
+                  <p className="text-morandi-darkBlue/40 text-sm italic">{item.con}</p>
                 </div>
               </div>
             </div>

@@ -1,60 +1,80 @@
 
 import React from 'react';
-import { ShieldCheck, ArrowRight } from 'lucide-react';
+import { ShieldCheck, ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const lineUrl = '#'; // 這裡填寫業務員的 LINE 連結
+  const lineUrl = 'https://lin.ee/jMoDY4z';
+  // 使用 lh3.googleusercontent.com/d/ 格式，這通常比 uc?id 格式在嵌入網頁時更穩定
+  const imageId = '1F13LyO20v97qsWK98-Uda0h55JG3Qvtm';
+  const imageUrl = `https://lh3.googleusercontent.com/d/${imageId}`;
 
   return (
-    <header className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?q=80&w=2073&auto=format&fit=crop" 
-          alt="Financial Security" 
-          className="w-full h-full object-cover object-center opacity-40 grayscale-[20%]"
-        />
-        <div className="absolute inset-0 bg-finance-navy/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-finance-navy/20 via-transparent to-[#F7FAFC]"></div>
-      </div>
+    <header className="relative min-h-screen flex items-center justify-center overflow-hidden bg-morandi-oat/30">
+      {/* Background Abstract Shapes */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-morandi-blue/10 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-morandi-sage/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
 
-      <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl animate-fade-in">
-        <div className="flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 mb-8 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 text-white font-bold tracking-[0.1em] text-xs md:text-sm shadow-xl">
-            <ShieldCheck className="w-4 h-4 text-finance-gold" />
-            <span>守護的不只是財富，更是對家人的愛與承諾</span>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="w-full lg:w-3/5 text-left animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 mb-6 bg-white px-4 py-2 rounded-full shadow-sm border border-morandi-blue/10">
+              <ShieldCheck className="w-4 h-4 text-morandi-blue" />
+              <span className="text-sm font-medium text-morandi-blue tracking-wider">傳承愛與責任，從規劃開始</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight text-morandi-darkBlue">
+              為生命中不可控的<br />
+              <span className="text-morandi-blue">寫下確定的答案</span>
+            </h1>
+            
+            <p className="text-lg md:text-xl mb-10 text-morandi-darkBlue/70 font-light leading-relaxed max-w-2xl">
+              專業財務規劃不只是購買產品，而是一場關於未來生活的深度對話。我們透過科學化的配置，確保您的夢想在任何風雨中都能屹立不搖。
+            </p>
+            
+            <div className="flex flex-wrap gap-4">
+              <a 
+                href={lineUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-morandi-darkBlue text-white font-bold py-5 px-10 rounded-2xl shadow-xl hover:bg-morandi-blue transition-all duration-300 transform hover:-translate-y-1"
+              >
+                免費預約 1:1 財務健檢
+              </a>
+              <a 
+                href="#planning"
+                className="bg-white text-morandi-darkBlue border border-morandi-darkBlue/10 font-bold py-5 px-10 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                探索規劃範疇
+              </a>
+            </div>
           </div>
           
-          <h1 className="text-4xl md:text-7xl font-bold mb-8 text-white leading-[1.2] drop-shadow-2xl">
-            為您的人生<br />
-            <span className="text-finance-gold">築起最強大的防禦牆</span>
-          </h1>
-          
-          <p className="text-lg md:text-2xl mb-12 text-white/90 font-light leading-relaxed max-w-3xl mx-auto drop-shadow-md">
-            意外與疾病無法預期，但「財務安全」可以提前規劃。<br className="hidden md:block" />
-            透過科學化的資產配置，讓您在任何突發狀況下都能從容應對。
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6">
-            <a 
-              href={lineUrl}
-              className="inline-flex items-center justify-center bg-finance-gold hover:bg-finance-gold/90 text-finance-navy font-bold text-lg py-5 px-12 rounded-lg shadow-2xl transition duration-500 transform hover:-translate-y-1 animate-pulse-slow"
-            >
-              預約 1 對 1 免費財務健檢
-            </a>
-            <a 
-              href="#planning"
-              className="inline-flex items-center justify-center bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border border-white/30 font-bold text-lg py-5 px-12 rounded-lg transition duration-500 shadow-md"
-            >
-              了解規劃範疇
-            </a>
+          <div className="w-full lg:w-2/5 relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-white">
+              <img 
+                src={imageUrl} 
+                alt="Professional Consultation" 
+                className="w-full aspect-[4/5] object-cover"
+                loading="lazy"
+                onError={(e) => {
+                  // 如果 Google Drive 連結因為權限或 API 限制暫時無法載入的備案
+                  const target = e.target as HTMLImageElement;
+                  if (!target.src.includes('unsplash')) {
+                    target.src = "https://images.unsplash.com/photo-1573164067047-0ad2c18a2024?q=80&w=2070&auto=format&fit=crop";
+                  }
+                }}
+              />
+            </div>
+            {/* Decoration */}
+            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-morandi-clay/20 rounded-3xl -z-10 animate-float"></div>
+            <div className="absolute -top-6 -right-6 w-24 h-24 bg-morandi-gold/20 rounded-full -z-10 animate-pulse"></div>
           </div>
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/50 animate-bounce">
-        <div className="w-px h-12 bg-gradient-to-b from-white/0 to-white/50 mx-auto mb-2"></div>
-        <span className="text-[10px] tracking-widest uppercase">Scroll Down</span>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40">
+        <span className="text-xs tracking-[0.3em] uppercase mb-2">Scroll</span>
+        <ArrowDown className="w-4 h-4 animate-bounce" />
       </div>
     </header>
   );

@@ -16,25 +16,25 @@ import StickyCTA from './components/StickyCTA';
 
 const App: React.FC = () => {
   return (
-    <div className="relative w-full overflow-hidden bg-zen-beige">
+    <div className="relative w-full overflow-hidden bg-morandi-cream">
       <Hero />
       {/* 1. 解決使用者痛點 */}
       <PainPoints />
-      {/* 2. 運動解決痛點的關鍵 */}
+      {/* 2. 解決痛點的關鍵 - 財務金字塔 */}
       <KeyFactor />
-      {/* 3. 師資介紹 */}
+      {/* 3. 顧問團隊介紹 */}
       <Teachers />
-      {/* 4. 代表性客戶 */}
+      {/* 4. 客戶真實改變 */}
       <Testimonials />
-      {/* 5. 課程介紹 */}
+      {/* 5. 規劃服務範疇 */}
       <Solutions />
       {/* 6. 客戶好評 */}
       <GoogleReviews />
-      {/* 7. 差異九宮格 */}
+      {/* 7. 差異對比 */}
       <ComparisonGrid />
-      {/* 10. 上課照片 */}
+      {/* 10. 辦公環境 */}
       <Gallery />
-      {/* 11. 呼籲行動 - 體驗價 399 */}
+      {/* 11. 呼籲行動 - 免費健檢 */}
       <PricingCTA />
       
       <Location />

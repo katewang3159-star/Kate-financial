@@ -1,43 +1,49 @@
 
 import React from 'react';
-import { AlertTriangle, TrendingDown, Heart } from 'lucide-react';
+import { Heart, Compass, Umbrella } from 'lucide-react';
 
 const PainPoints: React.FC = () => {
   const points = [
     {
-      icon: <AlertTriangle className="w-8 h-8 text-red-500" />,
-      title: "明天與意外，誰先到？",
-      desc: "多數人並非沒有錢，而是沒有做好「緊急預備金」與「風險對沖」的規劃。一旦發生突發狀況，生活品質將瞬間崩塌。"
+      icon: <Compass className="w-8 h-8" />,
+      title: "不知從何開始？",
+      desc: "保單琳瑯滿目，網路上資訊紛雜。我們幫您梳理邏輯，讓每一分錢都花在刀口上。",
+      bgColor: 'bg-morandi-blue/10',
+      iconColor: 'text-morandi-blue'
     },
     {
-      icon: <TrendingDown className="w-8 h-8 text-finance-gold" />,
-      title: "通膨正在吃掉你的未來",
-      desc: "只是存錢是不夠的。在高通膨時代，如何配置能穩健增長的資產，確保退休後的替代率，是每個人的必修課題。"
+      icon: <Umbrella className="w-8 h-8" />,
+      title: "保障是否足夠？",
+      desc: "現有的保障是否能覆蓋高額自費藥物或長照需求？我們用數據為您提供壓力測試。",
+      bgColor: 'bg-morandi-sage/10',
+      iconColor: 'text-morandi-sage'
     },
     {
-      icon: <Heart className="w-8 h-8 text-pink-500" />,
-      title: "想守護家人卻力不從心",
-      desc: "家人的醫療開支、孩子的教育費用。如果主要收入來源中斷，如何確保家人的生活軌跡不被打亂？這就是規劃的意義。"
+      icon: <Heart className="w-8 h-8" />,
+      title: "家人的未來？",
+      desc: "如果您突然無法繼續工作，家庭的房貸與教育費該如何延續？這就是我們規劃的核心。",
+      bgColor: 'bg-morandi-clay/10',
+      iconColor: 'text-morandi-clay'
     }
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-32 bg-white relative">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="text-center mb-20">
-          <span className="text-finance-gold font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Risk Assessment</span>
-          <h2 className="text-3xl md:text-5xl font-bold text-finance-navy mb-6">您是否也正面臨<br/><span className="font-light">這些看不見的財務黑洞？</span></h2>
-          <div className="w-20 h-1 bg-finance-gold/30 mx-auto rounded-full"></div>
+        <div className="flex flex-col items-center text-center mb-20">
+          <h2 className="text-sm font-bold tracking-[0.4em] text-morandi-blue uppercase mb-4">Risk Perception</h2>
+          <h3 className="text-3xl md:text-5xl font-serif font-bold text-morandi-darkBlue mb-6 leading-tight">面對未來，您可能有的憂慮</h3>
+          <div className="w-12 h-1 bg-morandi-gold/40 rounded-full"></div>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-8">
           {points.map((point, index) => (
-            <div key={index} className="group p-10 rounded-2xl bg-[#F7FAFC] border border-finance-navy/5 hover:bg-white hover:shadow-2xl transition-all duration-500">
-              <div className="mb-6 transform group-hover:scale-110 transition-transform">
+            <div key={index} className="group p-10 rounded-[2.5rem] bg-morandi-cream/50 border border-transparent hover:border-morandi-oat hover:bg-white hover:shadow-2xl hover:shadow-morandi-blue/5 transition-all duration-500">
+              <div className={`w-16 h-16 rounded-2xl ${point.bgColor} ${point.iconColor} flex items-center justify-center mb-8 transform group-hover:scale-110 transition-transform duration-500`}>
                 {point.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-finance-navy">{point.title}</h3>
-              <p className="text-finance-slate leading-relaxed font-light">
+              <h4 className="text-2xl font-bold mb-4 text-morandi-darkBlue">{point.title}</h4>
+              <p className="text-morandi-darkBlue/60 leading-relaxed font-light">
                 {point.desc}
               </p>
             </div>

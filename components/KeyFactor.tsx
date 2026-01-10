@@ -1,50 +1,52 @@
 
 import React from 'react';
-import { Layers, Shield, Coins } from 'lucide-react';
+import { Shield, TrendingUp, HandCoins } from 'lucide-react';
 
 const KeyFactor: React.FC = () => {
   return (
-    <section className="py-24 bg-finance-navy text-white overflow-hidden relative">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-finance-gold/5 rounded-full -mr-48 -mt-24 blur-3xl"></div>
+    <section className="py-32 bg-morandi-darkBlue text-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full -mr-64 -mt-64 blur-3xl"></div>
       
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-20">
           <div className="w-full lg:w-1/2">
-            <span className="text-finance-gold font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Strategic Planning</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">財務安全的<br/><span className="text-finance-gold italic">「穩固金字塔」</span></h2>
-            <p className="text-white/70 text-lg mb-12 font-light">
-              真正的財務自由，始於最底層的「風險防禦」。只有地基打穩了，上層的資產增值才有意義。
+            <h2 className="text-sm font-bold tracking-[0.4em] text-morandi-gold uppercase mb-6">Security Pyramid</h2>
+            <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8 leading-tight">
+              打好地基，<br/><span className="text-morandi-gold">財富才能穩健成長</span>
+            </h3>
+            <p className="text-white/60 text-lg mb-12 font-light leading-relaxed">
+              就像蓋房子，財務安全也有先後順序。沒有底層的風險轉嫁，上層的投資增值都只是空中樓閣。
             </p>
             
-            <div className="space-y-8">
+            <div className="space-y-10">
               {[
-                { icon: <Shield className="w-6 h-6" />, title: "風險轉移", desc: "利用低成本的保險工具，將無法承受的龐大醫療或失能風險轉嫁給保險公司。" },
-                { icon: <Layers className="w-6 h-6" />, title: "資產配置", desc: "根據人生不同階段的需求，配置不同流動性與報酬率的金融工具。" },
-                { icon: <Coins className="w-6 h-6" />, title: "財富傳承", desc: "透過專業法律與財務安排，確保財富能按照您的意志順利傳遞給下一代。" }
+                { icon: <Shield />, title: "風險防護層", desc: "確保疾病與意外不會吞噬您的生活資產。" },
+                { icon: <TrendingUp />, title: "資產增值層", desc: "透過複利工具，實現中長期的財務目標。" },
+                { icon: <HandCoins />, title: "財富傳承層", desc: "優雅地將愛延伸，確保財富精準留給摯愛。" }
               ].map((item, idx) => (
-                <div key={idx} className="flex gap-6">
-                  <div className="w-12 h-12 rounded-xl bg-finance-gold/20 flex items-center justify-center flex-shrink-0 text-finance-gold">
+                <div key={idx} className="flex gap-6 group">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 text-morandi-gold border border-white/10 group-hover:bg-morandi-gold group-hover:text-morandi-darkBlue transition-all duration-300">
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-1">{item.title}</h4>
-                    <p className="text-white/50 text-sm font-light">{item.desc}</p>
+                    <h4 className="text-xl font-bold mb-2">{item.title}</h4>
+                    <p className="text-white/40 text-sm font-light leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
           
-          <div className="w-full lg:w-1/2 relative">
-             <div className="relative z-10 bg-gradient-to-br from-white/10 to-white/5 p-12 rounded-3xl border border-white/10 backdrop-blur-sm shadow-2xl">
-                <div className="aspect-square flex flex-col justify-end space-y-2">
-                   {/* Visual Representation of Pyramid */}
-                   <div className="h-1/4 bg-finance-gold/80 rounded-t-sm flex items-center justify-center font-bold text-finance-navy text-xs md:text-base">資產傳承 (Wealth Legacy)</div>
-                   <div className="h-1/4 bg-finance-gold/60 flex items-center justify-center font-bold text-finance-navy text-xs md:text-base">退休規劃 (Retirement)</div>
-                   <div className="h-1/4 bg-finance-gold/40 flex items-center justify-center font-bold text-finance-navy text-xs md:text-base">資產配置 (Allocation)</div>
-                   <div className="h-1/4 bg-finance-gold/20 rounded-b-sm flex items-center justify-center font-bold text-finance-gold text-xs md:text-base">風險保障 (Risk Protection)</div>
+          <div className="w-full lg:w-1/2">
+             <div className="relative bg-white/5 p-12 rounded-[4rem] border border-white/10 backdrop-blur-md">
+                <div className="flex flex-col gap-3">
+                   {/* Visual Pyramid */}
+                   <div className="h-20 bg-morandi-gold rounded-t-2xl flex items-center justify-center font-bold text-morandi-darkBlue shadow-lg transform hover:-translate-y-1 transition-transform cursor-default">資產傳承</div>
+                   <div className="h-24 bg-morandi-gold/70 flex items-center justify-center font-bold text-morandi-darkBlue transform hover:-translate-y-1 transition-transform cursor-default">退休規劃</div>
+                   <div className="h-28 bg-morandi-gold/40 flex items-center justify-center font-bold text-white transform hover:-translate-y-1 transition-transform cursor-default">教育與增值</div>
+                   <div className="h-32 bg-morandi-gold/20 rounded-b-2xl flex items-center justify-center font-bold text-morandi-gold border border-morandi-gold/20 transform hover:-translate-y-1 transition-transform cursor-default uppercase tracking-widest text-lg">風險防護</div>
                 </div>
-                <div className="mt-8 text-center text-xs text-white/40 tracking-[0.2em]">THE FINANCIAL SECURITY PYRAMID</div>
+                <div className="mt-8 text-center text-[10px] text-white/30 tracking-[0.5em] uppercase">The Professional Strategy</div>
              </div>
           </div>
         </div>

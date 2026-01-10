@@ -7,10 +7,10 @@
     <title>專業財務安全規劃｜給家人最堅實的守護・資產配置・風險規劃</title>
     <meta name="description" content="專業保險與財務規劃建議，幫助您應對人生中的各種風險，實現財富傳承與家庭保障。">
     
-    <!-- Google Fonts: Noto Sans TC -->
+    <!-- Google Fonts: Noto Sans TC & Noto Serif TC -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -19,28 +19,31 @@
           extend: {
             fontFamily: {
               sans: ['"Noto Sans TC"', 'sans-serif'],
+              serif: ['"Noto Serif TC"', 'serif'],
             },
             colors: {
-              finance: {
-                navy: '#1A365D',
-                gold: '#D4AF37',
-                slate: '#4A5568',
-                cream: '#F7FAFC',
-                accent: '#2C5282',
+              morandi: {
+                blue: '#718E9E',      // 霧霾藍
+                darkBlue: '#4A5D6B',  // 深石板青
+                sage: '#9EB1A8',      // 鼠尾草綠
+                clay: '#B5838D',      // 肉桂粉/粘土色
+                oat: '#E9E4DB',       // 燕麥色
+                cream: '#F9F7F2',     // 奶油白
+                gold: '#C2A878',      // 古銅金
               }
             },
             animation: {
-              'fade-in': 'fadeIn 1.5s ease-out forwards',
-              'pulse-slow': 'pulseSlow 4s infinite',
+              'fade-in-up': 'fadeInUp 1s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
             },
             keyframes: {
-              fadeIn: {
-                '0%': { opacity: '0', transform: 'translateY(15px)' },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' },
               },
-              pulseSlow: {
-                '0%, 100%': { opacity: '1', transform: 'scale(1)' },
-                '50%': { opacity: '0.9', transform: 'scale(1.01)' },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
               }
             }
           }
@@ -60,7 +63,7 @@
 }
 </script>
 </head>
-<body class="bg-[#F7FAFC] text-finance-navy leading-relaxed">
+<body class="bg-morandi-cream text-morandi-darkBlue font-sans">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>

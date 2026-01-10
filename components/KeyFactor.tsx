@@ -1,36 +1,36 @@
 
 import React from 'react';
-import { Shield, TrendingUp, HandCoins } from 'lucide-react';
+import { Shield, Coins, Wallet } from 'lucide-react';
 
 const KeyFactor: React.FC = () => {
   return (
-    <section className="py-32 bg-morandi-darkBlue text-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full -mr-64 -mt-64 blur-3xl"></div>
+    <section className="py-32 bg-morandi-blue text-morandi-dark relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/20 rounded-full -mr-64 -mt-64 blur-3xl"></div>
       
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="w-full lg:w-1/2">
-            <h2 className="text-sm font-bold tracking-[0.4em] text-morandi-gold uppercase mb-6">Security Pyramid</h2>
-            <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8 leading-tight">
-              打好地基，<br/><span className="text-morandi-gold">財富才能穩健成長</span>
+            <h2 className="text-sm font-bold tracking-[0.4em] text-morandi-dark/50 uppercase mb-6">Smart Budgeting</h2>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-8 leading-tight">
+              理財第一步：<br/><span className="text-morandi-dark">先把漏水的地方補起來</span>
             </h3>
-            <p className="text-white/60 text-lg mb-12 font-light leading-relaxed">
-              就像蓋房子，財務安全也有先後順序。沒有底層的風險轉嫁，上層的投資增值都只是空中樓閣。
+            <p className="text-morandi-dark/70 text-lg md:text-xl mb-12 font-light leading-relaxed">
+              很多人急著投資，卻忘了先幫自己做好防護。阿蓉建議小資族要「先求有再求好」，建構最強的防火牆。
             </p>
             
             <div className="space-y-10">
               {[
-                { icon: <Shield />, title: "風險防護層", desc: "確保疾病與意外不會吞噬您的生活資產。" },
-                { icon: <TrendingUp />, title: "資產增值層", desc: "透過複利工具，實現中長期的財務目標。" },
-                { icon: <HandCoins />, title: "財富傳承層", desc: "優雅地將愛延伸，確保財富精準留給摯愛。" }
+                { icon: <Shield />, title: "基礎醫療護城河", desc: "月繳幾百元，就能應對萬一發生時的醫療支出。" },
+                { icon: <Wallet />, title: "無痛存錢術", desc: "把零碎的小錢鎖起來，未來的你一定會感謝現在的自己。" },
+                { icon: <Coins />, title: "夢想加速器", desc: "當地基穩了，你才能放心地追求創業、留學或買房夢。" }
               ].map((item, idx) => (
-                <div key={idx} className="flex gap-6 group">
-                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 text-morandi-gold border border-white/10 group-hover:bg-morandi-gold group-hover:text-morandi-darkBlue transition-all duration-300">
-                    {item.icon}
+                <div key={idx} className="flex gap-8 group">
+                  <div className="w-16 h-16 rounded-2xl bg-white/40 flex items-center justify-center flex-shrink-0 text-morandi-dark border border-morandi-dark/5 group-hover:bg-morandi-coral group-hover:text-morandi-cream transition-all duration-300">
+                    {React.cloneElement(item.icon as React.ReactElement, { className: "w-8 h-8" })}
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                    <p className="text-white/40 text-sm font-light leading-relaxed">{item.desc}</p>
+                    <h4 className="text-xl md:text-2xl font-bold mb-2">{item.title}</h4>
+                    <p className="text-morandi-dark/60 text-base md:text-lg font-light leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -38,15 +38,14 @@ const KeyFactor: React.FC = () => {
           </div>
           
           <div className="w-full lg:w-1/2">
-             <div className="relative bg-white/5 p-12 rounded-[4rem] border border-white/10 backdrop-blur-md">
-                <div className="flex flex-col gap-3">
-                   {/* Visual Pyramid */}
-                   <div className="h-20 bg-morandi-gold rounded-t-2xl flex items-center justify-center font-bold text-morandi-darkBlue shadow-lg transform hover:-translate-y-1 transition-transform cursor-default">資產傳承</div>
-                   <div className="h-24 bg-morandi-gold/70 flex items-center justify-center font-bold text-morandi-darkBlue transform hover:-translate-y-1 transition-transform cursor-default">退休規劃</div>
-                   <div className="h-28 bg-morandi-gold/40 flex items-center justify-center font-bold text-white transform hover:-translate-y-1 transition-transform cursor-default">教育與增值</div>
-                   <div className="h-32 bg-morandi-gold/20 rounded-b-2xl flex items-center justify-center font-bold text-morandi-gold border border-morandi-gold/20 transform hover:-translate-y-1 transition-transform cursor-default uppercase tracking-widest text-lg">風險防護</div>
+             <div className="relative bg-white/30 p-10 md:p-14 rounded-[4rem] border border-white/40 backdrop-blur-md">
+                <div className="flex flex-col gap-4">
+                   <div className="h-20 md:h-24 bg-morandi-coral rounded-t-[2rem] flex items-center justify-center font-bold text-morandi-cream shadow-sm text-xl md:text-2xl tracking-widest">幸福傳承</div>
+                   <div className="h-24 md:h-28 bg-morandi-coral/80 flex items-center justify-center font-bold text-morandi-dark text-xl md:text-2xl tracking-widest">圓夢計畫</div>
+                   <div className="h-28 md:h-32 bg-morandi-coral/60 flex items-center justify-center font-bold text-morandi-dark/70 text-lg md:text-xl tracking-widest">無痛小額儲蓄</div>
+                   <div className="h-32 md:h-36 bg-morandi-coral/40 rounded-b-[2rem] flex items-center justify-center font-bold text-morandi-dark/50 uppercase tracking-[0.2em] text-lg md:text-xl">CP值最高防護</div>
                 </div>
-                <div className="mt-8 text-center text-[10px] text-white/30 tracking-[0.5em] uppercase">The Professional Strategy</div>
+                <div className="mt-10 text-center text-xs text-morandi-dark/40 tracking-[0.5em] uppercase font-bold">The A-Rong Strategy</div>
              </div>
           </div>
         </div>

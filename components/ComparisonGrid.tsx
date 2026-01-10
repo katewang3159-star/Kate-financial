@@ -1,32 +1,33 @@
 
 import React from 'react';
-import { Check, X, Shield, BarChart3, Clock, Users } from 'lucide-react';
+import { Shield, Coins, Search, Headphones } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const ComparisonGrid: React.FC = () => {
   const items = [
     {
+      icon: <Search className="w-5 h-5" />,
+      title: "規劃方式",
+      pro: "阿蓉懂你：量身打造高 CP 值組合",
+      con: "亂跟風：看網路熱門就買，未必適合自己"
+    },
+    {
+      icon: <Coins className="w-5 h-5" />,
+      title: "預算分配",
+      pro: "精打細算：保障夠用就好，錢留給生活",
+      con: "人情壓力：買了一堆用不到的高額保費"
+    },
+    {
       icon: <Shield className="w-5 h-5" />,
-      title: "風險抵抗",
-      pro: "全面性的缺口診斷，確保槓桿極大化",
-      con: "隨機投保，保障重疊或存在隱形缺口"
+      title: "理賠防線",
+      pro: "阿蓉在線：白話解說，申請理賠有依靠",
+      con: "孤兒保單：業務員流動，出事沒人理"
     },
     {
-      icon: <BarChart3 className="w-5 h-5" />,
-      title: "資產配置",
-      pro: "多元工具搭配，對抗通膨與市場波動",
-      con: "資產單一化，難以應對極端經濟變革"
-    },
-    {
-      icon: <Clock className="w-5 h-5" />,
-      title: "長期價值",
-      pro: "追蹤調整，確保規劃符合人生階段",
-      con: "買完即遺忘，無法適應人生變更需求"
-    },
-    {
-      icon: <Users className="w-5 h-5" />,
-      title: "家庭守護",
-      pro: "預留稅務與法律規劃，財富精準傳承",
-      con: "缺乏系統安排，導致財富縮水或紛爭"
+      icon: <Headphones className="w-5 h-5" />,
+      title: "溝通感受",
+      pro: "像朋友一樣：不推銷，只幫你解決問題",
+      con: "強大壓力：一見面就推儲蓄險，讓人想逃"
     }
   ];
 
@@ -34,8 +35,8 @@ const ComparisonGrid: React.FC = () => {
     <section className="py-32 bg-white">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-24">
-          <h2 className="text-sm font-bold tracking-[0.4em] text-morandi-blue uppercase mb-4">Value Proposition</h2>
-          <h3 className="text-3xl md:text-5xl font-serif font-bold text-morandi-darkBlue">為什麼需要專業規劃？</h3>
+          <h2 className="text-sm font-bold tracking-[0.4em] text-morandi-blue uppercase mb-4">Why Choose A-Rong?</h2>
+          <h3 className="text-3xl md:text-5xl font-serif font-bold text-morandi-darkBlue">聰明小資的選擇差別</h3>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">

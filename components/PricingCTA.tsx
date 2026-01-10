@@ -1,39 +1,39 @@
 
 import React from 'react';
-import { MessageCircle, ScrollText } from 'lucide-react';
+import { MessageCircle, Coffee } from 'lucide-react';
 
 const PricingCTA: React.FC = () => {
   const lineUrl = "https://lin.ee/jMoDY4z";
 
   return (
-    <section className="py-32 bg-morandi-oat/20">
+    <section className="py-24 bg-morandi-cream">
       <div className="container mx-auto px-6 max-w-5xl">
-        <div className="bg-morandi-darkBlue rounded-[4rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
+        <div className="bg-morandi-blue rounded-[3rem] p-10 md:p-16 text-center text-morandi-dark relative overflow-hidden shadow-2xl border border-white/30">
           {/* Decorative element */}
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-morandi-gold/20 rounded-full blur-2xl"></div>
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-morandi-coral/10 rounded-full blur-2xl"></div>
           
           <div className="relative z-10 flex flex-col items-center">
-            <div className="w-20 h-20 bg-morandi-gold/20 backdrop-blur-md rounded-3xl flex items-center justify-center mb-10 border border-morandi-gold/30">
-              <ScrollText className="w-10 h-10 text-morandi-gold" />
+            <div className="w-16 h-16 bg-white/40 backdrop-blur-md rounded-2xl flex items-center justify-center mb-8 border border-morandi-dark/5">
+              <Coffee className="w-8 h-8 text-morandi-dark" />
             </div>
             
-            <h2 className="text-3xl md:text-6xl font-serif font-bold mb-8 leading-tight">讓專業成為<br/>您的財務靠山</h2>
-            <p className="text-xl font-light mb-12 text-white/60 leading-relaxed max-w-2xl">
-              規劃是一段旅程的開始。我們為您提供一份清晰、專業且具備執行力的財務報告書，讓您對未來瞭若指掌。
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">像找朋友聊天一樣<br/>沒壓力地聊聊未來</h2>
+            <p className="text-lg font-light mb-10 text-morandi-dark/70 leading-relaxed max-w-2xl">
+              阿蓉不推銷，只想幫你省錢又能買到安心。如果你也對財務感到迷惘，歡迎隨時找阿蓉聊聊！
             </p>
             
-            <div className="inline-block bg-white/5 border border-white/10 px-8 py-3 rounded-full mb-12 text-morandi-gold font-medium tracking-widest text-sm">
-               限量：本週僅餘 3 個深度健檢名額
+            <div className="inline-block bg-white/40 border border-morandi-dark/5 px-6 py-2 rounded-full mb-10 text-morandi-dark/80 font-bold tracking-widest text-xs">
+               新手友善：免費諮詢不限時，聊完覺得不合適也沒關係
             </div>
             
             <a 
               href={lineUrl}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex items-center justify-center bg-morandi-gold text-morandi-darkBlue font-bold text-xl py-6 px-16 rounded-2xl shadow-2xl hover:bg-white transition-all duration-300 transform hover:scale-105"
+              className="group inline-flex items-center justify-center bg-morandi-coral text-morandi-cream font-bold text-lg py-5 px-12 rounded-2xl shadow-xl hover:brightness-90 transition-all duration-300 transform hover:scale-105"
             >
-              <MessageCircle className="w-6 h-6 mr-4" />
-              加 LINE 預約專屬時段
+              <MessageCircle className="w-6 h-6 mr-3" />
+              加 LINE 找阿蓉聊聊
             </a>
           </div>
         </div>

@@ -46,7 +46,7 @@ const Testimonials: React.FC = () => {
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-20">
           <h2 className="text-sm font-bold tracking-[0.4em] text-morandi-blue uppercase mb-4">Success Stories</h2>
-          <h3 className="text-3xl md:text-5xl font-serif font-bold text-morandi-darkBlue mb-6">學員真實回饋</h3>
+          <h3 className="text-3xl md:text-5xl font-serif font-bold text-morandi-darkBlue mb-6">客戶真實回饋</h3>
           <p className="text-morandi-blue text-xl md:text-2xl font-light tracking-wide">找對阿蓉，存錢跟保障原來不衝突</p>
           <div className="flex items-center justify-center gap-1 text-morandi-gold mt-6">
             {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-current" />)}

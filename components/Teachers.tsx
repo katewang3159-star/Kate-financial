@@ -1,10 +1,11 @@
 
 import React from 'react';
-import { Sparkles, ShieldCheck } from 'lucide-react';
+import { Sparkles, ShieldCheck, FileSearch } from 'lucide-react';
 
 const Teachers: React.FC = () => {
   const imageId = '13xNMLAj2AnUWbHDH0nKnZqKsmS5BXADa';
   const imageUrl = `https://lh3.googleusercontent.com/d/${imageId}`;
+  const insuranceReviewUrl = "https://lin.ee/8Lo8Mw9";
 
   return (
     <section className="py-24 bg-morandi-cream relative overflow-hidden">
@@ -50,7 +51,7 @@ const Teachers: React.FC = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {[
                 { title: "理財診斷懶人包", desc: "幫妳看清現有保單，刪除不需要的浪費" },
                 { title: "高 CP 值防護網", desc: "用最低預算買到最高槓桿的保障" },
@@ -65,6 +66,19 @@ const Teachers: React.FC = () => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="flex justify-start">
+              <a 
+                href={insuranceReviewUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center gap-3 bg-morandi-dark text-white font-bold py-5 px-10 rounded-2xl shadow-xl hover:bg-morandi-coral transition-all duration-300 transform hover:scale-105"
+              >
+                <FileSearch className="w-7 h-7 text-morandi-blue group-hover:text-white transition-colors" />
+                <span className="text-xl md:text-2xl tracking-widest">保單健診限定名額，特價 299 元</span>
+              </a>
             </div>
           </div>
         </div>

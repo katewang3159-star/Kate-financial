@@ -29,6 +29,10 @@ const PainPoints: React.FC = () => {
     }
   ];
 
+  const toggleAccordion = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <section className="py-24 bg-white relative">
       <div className="container mx-auto px-6 max-w-5xl">
@@ -37,68 +41,56 @@ const PainPoints: React.FC = () => {
           <h3 className="text-3xl md:text-5xl font-serif font-bold text-morandi-dark mb-6 leading-tight">
             親愛的，妳是否也曾有這些迷惘？
           </h3>
-          <p className="text-morandi-dark/40 text-lg mb-8">點擊下方按鈕，看看阿蓉如何幫妳解決</p>
+          <p className="text-morandi-dark/40 text-lg mb-8">點擊下方卡片，直接查看解決方案</p>
           <div className="w-16 h-1.5 bg-morandi-blue/30 rounded-full"></div>
         </div>
         
-        {/* 第一層：互動按鈕 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {points.map((point, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`flex items-center gap-6 p-8 rounded-[2rem] border-2 transition-all duration-500 text-left group ${
+            <div 
+              key={index} 
+              className={`flex flex-col rounded-[2.5rem] border-2 transition-all duration-500 overflow-hidden ${
                 activeIndex === index 
-                ? 'border-morandi-blue bg-morandi-lightBlue/30 shadow-lg scale-105' 
-                : 'border-morandi-cream bg-morandi-cream/50 hover:border-morandi-blue/20 hover:bg-white'
+                ? 'border-morandi-blue bg-white shadow-2xl scale-[1.02] z-10' 
+                : 'border-morandi-cream bg-morandi-cream/30 hover:border-morandi-blue/20'
               }`}
             >
-              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-colors duration-500 ${
-                activeIndex === index ? 'bg-morandi-blue text-white' : `${point.bgColor} ${point.iconColor}`
-              }`}>
-                {point.icon}
-              </div>
-              <div className="flex-grow">
-                <span className={`text-xl font-bold transition-colors duration-500 ${
-                  activeIndex === index ? 'text-morandi-dark' : 'text-morandi-dark/70'
+              <button
+                onClick={() => toggleAccordion(index)}
+                className="flex items-center gap-5 p-8 text-left group w-full"
+              >
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 flex-shrink-0 ${
+                  activeIndex === index ? 'bg-morandi-blue text-white shadow-lg' : `${point.bgColor} ${point.iconColor}`
                 }`}>
-                  {point.title}
-                </span>
-              </div>
-              <ChevronRight className={`w-5 h-5 transition-transform duration-500 ${
-                activeIndex === index ? 'rotate-90 text-morandi-blue' : 'text-morandi-dark/20 group-hover:translate-x-1'
-              }`} />
-            </button>
-          ))}
-        </div>
-
-        {/* 第二層：詳細內容區 */}
-        <div className="relative min-h-[220px]">
-          {points.map((point, index) => (
-            <div
-              key={index}
-              className={`absolute top-0 left-0 w-full p-12 rounded-[3rem] bg-gradient-to-br from-morandi-cream to-white border border-morandi-blue/10 shadow-xl transition-all duration-700 ease-out ${
-                activeIndex === index 
-                ? 'opacity-100 translate-y-0 scale-100 z-10' 
-                : 'opacity-0 translate-y-10 scale-95 -z-10 pointer-events-none'
-              }`}
-            >
-              <div className="flex flex-col md:flex-row gap-10 items-center">
-                <div className={`w-20 h-20 rounded-[2rem] ${point.bgColor} ${point.iconColor} flex items-center justify-center flex-shrink-0 shadow-sm`}>
-                  {React.cloneElement(point.icon as React.ReactElement, { className: "w-10 h-10" })}
+                  {point.icon}
                 </div>
-                <div className="text-center md:text-left">
-                  <h4 className="text-2xl font-bold mb-4 text-morandi-dark">關於「{point.title}」</h4>
-                  <p className="text-morandi-dark/70 leading-relaxed font-light text-xl md:text-2xl">
+                <div className="flex-grow">
+                  <span className={`text-xl font-bold transition-colors duration-500 ${
+                    activeIndex === index ? 'text-morandi-dark' : 'text-morandi-dark/70'
+                  }`}>
+                    {point.title}
+                  </span>
+                </div>
+                <ChevronRight className={`w-5 h-5 transition-transform duration-500 flex-shrink-0 ${
+                  activeIndex === index ? 'rotate-90 text-morandi-blue' : 'text-morandi-dark/20'
+                }`} />
+              </button>
+
+              <div 
+                className={`transition-all duration-500 ease-in-out px-8 ${
+                  activeIndex === index 
+                  ? 'max-h-[500px] pb-10 opacity-100' 
+                  : 'max-h-0 pb-0 opacity-0 pointer-events-none'
+                }`}
+              >
+                <div className="pt-6 border-t border-morandi-blue/10">
+                  <p className="text-morandi-dark/70 leading-relaxed font-light text-lg md:text-xl">
                     {point.desc}
                   </p>
-                </div>
-              </div>
-              
-              <div className="mt-10 pt-8 border-t border-morandi-blue/10 flex justify-center md:justify-end">
-                <div className="text-morandi-blue font-bold flex items-center gap-2 italic tracking-widest text-lg">
-                  <div className="w-8 h-[2px] bg-morandi-blue/30"></div>
-                  阿蓉Strategy
+                  <div className="mt-8 flex items-center gap-3 text-morandi-blue font-bold italic tracking-wider text-sm">
+                    <div className="w-6 h-[2px] bg-morandi-blue/30"></div>
+                    阿蓉 Strategy
+                  </div>
                 </div>
               </div>
             </div>

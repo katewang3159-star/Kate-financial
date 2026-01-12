@@ -13,11 +13,11 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center animate-fade-in-up">
           <div className="inline-flex items-center gap-2 mb-8 bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full border border-morandi-blue/30">
             < Sparkles className="w-5 h-5 text-morandi-coral" />
-            <span className="text-sm md:text-base font-medium text-morandi-dark tracking-widest">我是阿蓉，陪妳從小資開始變富有</span>
+            <span className="text-sm md:text-base font-medium text-morandi-dark tracking-widest">我是阿蓉，陪妳從現在開始變富有</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-8 leading-tight text-morandi-dark max-w-4xl">
-            讓你的每一分辛苦錢<br />
+            讓妳的每一分辛苦錢<br />
             <span className="text-morandi-blue brightness-75">都成為未來的底氣</span>
           </h1>
           

@@ -15,14 +15,14 @@ const KeyFactor: React.FC = () => {
               理財第一步：<br/><span className="text-morandi-dark">先把漏水的地方補起來</span>
             </h3>
             <p className="text-morandi-dark/70 text-lg md:text-xl mb-12 font-light leading-relaxed">
-              很多人急著投資，卻忘了先幫自己做好防護。阿蓉建議小資族要「先求有再求好」，建構最強的防火牆。
+              很多人急著投資，卻忘了先幫自己做好防護。阿蓉建議理財新朋友要「先求有再求好」，建構最強的防火牆。
             </p>
             
             <div className="space-y-10">
               {[
                 { icon: <Shield />, title: "基礎醫療護城河", desc: "運用631法則，安全又安心的應對萬一發生時的醫療支出。" },
-                { icon: <Wallet />, title: "無痛存錢術", desc: "把零碎的小錢鎖起來，未來的你一定會感謝現在的自己。" },
-                { icon: <Coins />, title: "夢想加速器", desc: "當地基穩了，你才能放心地追求創業、留學或買房夢。" }
+                { icon: <Wallet />, title: "無痛存錢術", desc: "把零碎的小錢鎖起來，未來的妳一定會感謝現在的自己。" },
+                { icon: <Coins />, title: "夢想加速器", desc: "當地基穩了，妳才能放心地追求創業、留學或買房夢。" }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-8 group">
                   <div className="w-16 h-16 rounded-2xl bg-white/40 flex items-center justify-center flex-shrink-0 text-morandi-dark border border-morandi-dark/5 group-hover:bg-morandi-coral group-hover:text-morandi-cream transition-all duration-300">

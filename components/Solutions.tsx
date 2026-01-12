@@ -6,8 +6,8 @@ const Solutions: React.FC = () => {
   const services = [
     {
       icon: <HeartPulse className="w-7 h-7" />,
-      title: "小資全能醫療包",
-      desc: "專為預算有限設計。實支實付、進階醫療防護一次到位，萬一住院不領薪水也不怕。"
+      title: "全能醫療防禦包",
+      desc: "專為平衡預算設計。實支實付、進階醫療防護一次到位，萬一住院不領薪水也不怕。"
     },
     {
       icon: <Coffee className="w-7 h-7" />,
@@ -17,22 +17,22 @@ const Solutions: React.FC = () => {
     {
       icon: <ShieldPlus className="w-7 h-7" />,
       title: "第一份保單規劃",
-      desc: "剛畢業或換工作？阿蓉幫你規劃「基礎防禦圖」，讓人生第一步踩得最穩。"
+      desc: "剛畢業或換工作？阿蓉幫妳規劃「基礎防禦圖」，讓人生第一步踩得最穩。"
     },
     {
       icon: <PartyPopper className="w-7 h-7" />,
       title: "旅遊與意外防護",
-      desc: "愛旅遊、愛生活？便宜卻強大的意外傷害險，讓你出國或通勤都心安。"
+      desc: "愛生活、愛探索？便宜卻強大的意外傷害險，讓妳出外通勤都心安。"
     },
     {
       icon: <PiggyBank className="w-7 h-7" />,
       title: "無痛老後現金流",
-      desc: "年紀還輕？複利就是你的超能力。現在開始每天存一點，以後多領一輩子。"
+      desc: "複利就是妳的超能力。現在開始規劃，為未來的自己準備一份優雅的禮物。"
     },
     {
       icon: <GraduationCap className="w-7 h-7" />,
       title: "專業保單大掃除",
-      desc: "幫你檢查老舊保單。補足缺口、剔除過時項目，把錢省下來。"
+      desc: "幫妳檢查老舊保單。補足缺口、剔除過時項目，把錢省下來花在更有意義的地方。"
     }
   ];
 
@@ -41,7 +41,7 @@ const Solutions: React.FC = () => {
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-20">
           <span className="text-morandi-blue font-bold tracking-[0.4em] uppercase text-sm mb-4 block">Smart Solutions</span>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-morandi-dark">給小資族的<br/><span className="font-light text-morandi-coral">三大無痛規劃術</span></h2>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-morandi-dark">為妳準備的<br/><span className="font-light text-morandi-coral">三大無痛規劃術</span></h2>
           <div className="w-16 h-1.5 bg-morandi-blue/20 mx-auto mt-8 rounded-full"></div>
         </div>
 

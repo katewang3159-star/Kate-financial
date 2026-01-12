@@ -37,25 +37,25 @@ const Teachers: React.FC = () => {
               王宥蓉
             </h2>
             <h3 className="text-xl md:text-2xl font-bold text-morandi-coral mb-10 tracking-widest">
-              我是阿蓉，你的小資保險管家
+              我是阿蓉，妳的保險規劃管家
             </h3>
 
             <div className="space-y-8 mb-12">
               <p className="text-xl md:text-2xl text-morandi-dark/70 leading-relaxed font-light italic border-l-8 border-morandi-blue/30 pl-8">
-                「我不喜歡推銷，我只喜歡陪你釐清生活。保險應該是讓我們生活得更有餘裕，而不是成為負擔。」
+                「我不喜歡推銷，我只喜歡陪妳釐清生活。保險應該是讓我們生活得更有餘裕，而不是成為負擔。」
               </p>
               <div className="text-morandi-dark/80 text-lg md:text-xl leading-relaxed space-y-6">
                 <p>嘿，我是阿蓉！我明白那種「想買保障又怕被當肥羊」的心情。</p>
-                <p>我的任務很簡單：幫你把錢花在刀口上。沒有高深莫測的術語，只有最真實的規劃建議。</p>
+                <p>我的任務很簡單：幫妳把錢花在刀口上。沒有高深莫測的術語，只有最真實的規劃建議。</p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { title: "新手懶人包診斷", desc: "幫你看清現有保單，刪除不需要的浪費" },
+                { title: "理財診斷懶人包", desc: "幫妳看清現有保單，刪除不需要的浪費" },
                 { title: "高 CP 值防護網", desc: "用最低預算買到最高槓桿的保障" },
-                { title: "無痛小額存錢規劃", desc: "讓存錢變有趣，夢想離你越來越近" },
-                { title: "理賠陪伴不孤單", desc: "萬一發生事情，阿蓉永遠是你的第一靠山" }
+                { title: "無痛小額存錢規劃", desc: "讓存錢變有趣，夢想離妳越來越近" },
+                { title: "理賠陪伴不孤單", desc: "萬一發生事情，阿蓉永遠是妳的第一靠山" }
               ].map((skill, idx) => (
                 <div key={idx} className="flex items-start gap-4 p-6 rounded-3xl bg-white shadow-sm border border-morandi-lightBlue/50 hover:border-morandi-coral transition-all duration-300">
                   <ShieldCheck className="w-6 h-6 text-morandi-blue mt-1 flex-shrink-0" />

@@ -3,8 +3,6 @@ import React from 'react';
 import { ArrowDown, Sparkles } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const lineUrl = 'https://lin.ee/jMoDY4z';
-
   return (
     <header className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-morandi-lightBlue via-morandi-cream to-morandi-lightCoral">
       {/* Background Decor */}
@@ -14,7 +12,7 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center animate-fade-in-up">
           <div className="inline-flex items-center gap-2 mb-8 bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full border border-morandi-blue/30">
-            <Sparkles className="w-5 h-5 text-morandi-coral" />
+            < Sparkles className="w-5 h-5 text-morandi-coral" />
             <span className="text-sm md:text-base font-medium text-morandi-dark tracking-widest">我是阿蓉，陪妳從小資開始變富有</span>
           </div>
           
@@ -26,23 +24,6 @@ const Hero: React.FC = () => {
           <p className="text-lg md:text-xl lg:text-2xl mb-12 text-morandi-dark/70 font-light leading-relaxed max-w-3xl">
             規劃不是為了現在省錢，而是為了讓未來的妳擁有選擇權。阿蓉幫妳精準對焦需求，打造最高 CP 值的防護網。
           </p>
-          
-          <div className="flex flex-wrap justify-center gap-6">
-            <a 
-              href={lineUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-morandi-blue text-morandi-dark font-bold py-5 px-12 rounded-2xl shadow-lg hover:brightness-95 transition-all duration-300 transform hover:-translate-y-1 border border-white/20 text-lg"
-            >
-              跟阿蓉預約免費聊聊
-            </a>
-            <a 
-              href="#planning"
-              className="bg-white/80 text-morandi-dark border border-morandi-blue/20 font-bold py-5 px-12 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 text-lg"
-            >
-              看高 CP 值方案
-            </a>
-          </div>
         </div>
       </div>
       

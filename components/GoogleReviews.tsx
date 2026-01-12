@@ -34,25 +34,25 @@ const GoogleReviews: React.FC = () => {
           <Quote className="w-16 h-16 text-morandi-gold/20 mx-auto mb-6" />
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-morandi-darkBlue mb-4">客戶真實好評</h2>
           <div className="flex items-center justify-center gap-1 text-morandi-gold mb-2">
-            {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-current" />)}
-            <span className="text-morandi-darkBlue font-bold ml-3 text-lg">5.0 / 5.0</span>
+            {[...Array(5)].map((_, i) => <Star key={i} className="w-8 h-8 fill-current" />)}
+            <span className="text-morandi-darkBlue font-bold ml-3 text-2xl">5.0 / 5.0</span>
           </div>
-          <p className="text-morandi-blue/60 text-sm tracking-widest">GOOGLE 商家五星滿分推薦</p>
+          <p className="text-morandi-blue/60 text-base tracking-widest">GOOGLE 商家五星滿分推薦</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-10">
           {reviews.map((review, index) => (
             <div key={index} className="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-morandi-blue/5 border border-morandi-oat flex flex-col hover:-translate-y-2 transition-transform duration-500">
               <div className="flex items-center mb-8">
-                <div className="w-14 h-14 rounded-2xl bg-morandi-blue/10 text-morandi-blue flex items-center justify-center font-bold text-xl mr-5 border border-morandi-blue/20">
+                <div className="w-16 h-16 rounded-2xl bg-morandi-blue/10 text-morandi-blue flex items-center justify-center font-bold text-2xl mr-5 border border-morandi-blue/20">
                   {review.avatar}
                 </div>
                 <div>
-                  <div className="font-bold text-morandi-darkBlue">{review.name}</div>
-                  <div className="text-morandi-blue/40 text-xs tracking-tighter">{review.date}</div>
+                  <div className="font-bold text-morandi-darkBlue text-xl">{review.name}</div>
+                  <div className="text-morandi-blue/40 text-sm tracking-tighter">{review.date}</div>
                 </div>
               </div>
-              <p className="text-morandi-darkBlue/70 text-base leading-relaxed italic flex-grow font-light">
+              <p className="text-morandi-darkBlue/70 text-lg md:text-xl leading-relaxed italic flex-grow font-light">
                 「{review.text}」
               </p>
             </div>

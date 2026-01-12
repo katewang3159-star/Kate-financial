@@ -20,7 +20,7 @@ const KeyFactor: React.FC = () => {
             
             <div className="space-y-10">
               {[
-                { icon: <Shield />, title: "基礎醫療護城河", desc: "月繳幾百元，就能應對萬一發生時的醫療支出。" },
+                { icon: <Shield />, title: "基礎醫療護城河", desc: "運用631法則，安全又安心的應對萬一發生時的醫療支出。" },
                 { icon: <Wallet />, title: "無痛存錢術", desc: "把零碎的小錢鎖起來，未來的你一定會感謝現在的自己。" },
                 { icon: <Coins />, title: "夢想加速器", desc: "當地基穩了，你才能放心地追求創業、留學或買房夢。" }
               ].map((item, idx) => (
@@ -45,7 +45,7 @@ const KeyFactor: React.FC = () => {
                    <div className="h-28 md:h-32 bg-morandi-coral/60 flex items-center justify-center font-bold text-morandi-dark/70 text-lg md:text-xl tracking-widest">無痛小額儲蓄</div>
                    <div className="h-32 md:h-36 bg-morandi-coral/40 rounded-b-[2rem] flex items-center justify-center font-bold text-morandi-dark/50 uppercase tracking-[0.2em] text-lg md:text-xl">CP值最高防護</div>
                 </div>
-                <div className="mt-10 text-center text-xs text-morandi-dark/40 tracking-[0.5em] uppercase font-bold">The A-Rong Strategy</div>
+                <div className="mt-10 text-center text-xs text-morandi-dark/40 tracking-[0.5em] uppercase font-bold">阿蓉Strategy</div>
              </div>
           </div>
         </div>

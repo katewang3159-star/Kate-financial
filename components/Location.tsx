@@ -6,14 +6,8 @@ const Location: React.FC = () => {
   const lineUrl = "https://lin.ee/jMoDY4z";
   
   return (
-    <section id="location" className="py-32 bg-white">
+    <section id="location" className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-serif font-light text-morandi-darkBlue mb-4">專業諮詢空間｜<span className="font-bold text-morandi-blue">您的財富守護地</span></h2>
-          <p className="text-morandi-darkBlue/60 text-lg font-light">隱密且專業的對談環境，確保您的個人財務隱私</p>
-          <div className="w-12 h-1 bg-morandi-gold/30 mx-auto mt-6 rounded-full"></div>
-        </div>
-
         <div className="flex flex-col lg:flex-row bg-morandi-cream/50 rounded-[4rem] overflow-hidden max-w-6xl mx-auto shadow-2xl shadow-morandi-blue/5 border border-morandi-oat">
           {/* Map */}
           <div className="w-full lg:w-3/5 h-[450px] lg:h-auto opacity-90 hover:opacity-100 transition-opacity duration-1000">

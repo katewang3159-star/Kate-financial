@@ -1,8 +1,10 @@
 
-import React from 'react';
-import { Sparkles, ShieldCheck, FileSearch } from 'lucide-react';
+import React, { useState } from 'react';
+import { Sparkles, ShieldCheck, FileSearch, ChevronDown, ChevronUp, BarChart3 } from 'lucide-react';
 
 const Teachers: React.FC = () => {
+  const [showDetails, setShowDetails] = useState(false);
+  
   const imageId = '13xNMLAj2AnUWbHDH0nKnZqKsmS5BXADa';
   const imageUrl = `https://lh3.googleusercontent.com/d/${imageId}`;
   const insuranceReviewUrl = "https://lin.ee/8Lo8Mw9";
@@ -38,7 +40,7 @@ const Teachers: React.FC = () => {
               王宥蓉
             </h2>
             <h3 className="text-xl md:text-2xl font-bold text-morandi-coral mb-10 tracking-widest">
-              我是阿蓉，妳的保險規劃管家
+              我是阿蓉，妳的客戶規劃管家
             </h3>
 
             <div className="space-y-8 mb-12">
@@ -68,18 +70,78 @@ const Teachers: React.FC = () => {
               ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="flex justify-start">
-              <a 
-                href={insuranceReviewUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="group flex items-center gap-3 bg-morandi-dark text-white font-bold py-5 px-10 rounded-2xl shadow-xl hover:bg-morandi-coral transition-all duration-300 transform hover:scale-105"
+            {/* CTA Buttons Group */}
+            <div className="space-y-6 mb-8">
+              {/* Primary LINE Button */}
+              <div className="flex justify-start">
+                <a 
+                  href={insuranceReviewUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center gap-3 bg-morandi-dark text-white font-bold py-5 px-10 rounded-2xl shadow-xl hover:bg-morandi-coral transition-all duration-300 transform hover:scale-105"
+                >
+                  <FileSearch className="w-7 h-7 text-morandi-blue group-hover:text-white transition-colors" />
+                  <span className="text-xl md:text-2xl tracking-widest">保單健診限定名額，特價 299 元</span>
+                </a>
+              </div>
+
+              {/* Dynamic Toggle Button */}
+              <button 
+                onClick={() => setShowDetails(!showDetails)}
+                className="flex items-center gap-2 text-morandi-darkBlue font-bold hover:text-morandi-coral transition-colors py-3 px-6 rounded-xl border border-morandi-darkBlue/20 bg-white/50 backdrop-blur-sm shadow-sm hover:shadow-md active:scale-95 transform duration-200"
               >
-                <FileSearch className="w-7 h-7 text-morandi-blue group-hover:text-white transition-colors" />
-                <span className="text-xl md:text-2xl tracking-widest">保單健診限定名額，特價 299 元</span>
-              </a>
+                <BarChart3 className="w-5 h-5 text-morandi-blue" />
+                <span className="tracking-widest">
+                  {showDetails ? "隱藏規劃祕訣" : "點我了解：理財規劃的祕訣 (631 法則)"}
+                </span>
+                {showDetails ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5 animate-bounce" />}
+              </button>
             </div>
+
+            {/* Visuals Container with Animation */}
+            <div className={`transition-all duration-700 ease-in-out overflow-hidden ${showDetails ? 'max-h-[1000px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-4 pointer-events-none'}`}>
+              <div className="py-6 max-w-2xl">
+                {/* 理財金字塔 Graphic */}
+                <div className="relative pt-10 pb-12 bg-white/40 rounded-[3rem] border border-white p-8 shadow-sm">
+                  <div className="flex flex-col items-center">
+                    {/* Top - Triangle (10%) */}
+                    <div className="relative w-0 h-0 border-l-[75px] border-r-[75px] border-b-[85px] border-transparent border-b-[#E67E22] flex items-end justify-center drop-shadow-md">
+                      <div className="absolute top-12 left-1/2 -translate-x-1/2 w-48 text-center text-white leading-tight">
+                        <div className="font-bold text-2xl">10%</div>
+                        <div className="text-[11px] font-bold whitespace-nowrap">風險管理 / 醫療保險</div>
+                      </div>
+                    </div>
+                    
+                    {/* Middle - Trapezoid (30%) */}
+                    <div 
+                      className="relative w-[300px] h-[95px] bg-[#27AE60] mt-1.5 flex items-center justify-center text-white shadow-md hover:brightness-105 transition-all"
+                      style={{ clipPath: 'polygon(18% 0%, 82% 0%, 100% 100%, 0% 100%)' }}
+                    >
+                      <div className="text-center">
+                        <div className="font-bold text-2xl">30%</div>
+                        <div className="text-sm font-bold tracking-widest">投資理財</div>
+                      </div>
+                    </div>
+
+                    {/* Bottom - Trapezoid (60%) */}
+                    <div 
+                      className="relative w-[400px] h-[110px] bg-[#2980B9] mt-1.5 flex items-center justify-center text-white shadow-lg hover:brightness-105 transition-all"
+                      style={{ clipPath: 'polygon(12% 0%, 88% 0%, 100% 100%, 0% 100%)' }}
+                    >
+                      <div className="text-center">
+                        <div className="font-bold text-3xl">60%</div>
+                        <div className="text-xl font-bold tracking-[0.2em]">生活開銷</div>
+                      </div>
+                    </div>
+
+                    <div className="mt-10 text-morandi-dark/30 text-[10px] font-bold tracking-[0.5em] uppercase border-t border-morandi-dark/5 pt-4 w-full text-center">
+                      理財規劃金字塔結構 (631 法則)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const ComparisonGrid: React.FC = () => {
     {
       icon: <Search className="w-6 h-6" />,
       title: "規劃方式",
-      pro: "阿蓉懂妳：量身打造高 CP 值組合",
+      pro: "阿蓉懂你：量身打造高 CP 值組合",
       con: "亂跟風：看網路熱門就買，未必適合自己"
     },
     {
@@ -25,7 +25,7 @@ const ComparisonGrid: React.FC = () => {
     {
       icon: <Headphones className="w-6 h-6" />,
       title: "溝通感受",
-      pro: "像朋友一樣：不推銷，只幫妳解決問題",
+      pro: "像朋友一樣：不推銷，只幫你解決問題",
       con: "強大壓力：一見面就推儲蓄險，讓人想逃"
     }
   ];

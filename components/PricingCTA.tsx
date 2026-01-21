@@ -16,9 +16,9 @@ const PricingCTA: React.FC = () => {
               <Coffee className="w-8 h-8 text-morandi-dark" />
             </div>
             
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight text-morandi-dark">親愛的，妳是否也曾有這些迷惘？<br/>讓阿蓉陪妳聊聊未來</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight text-morandi-dark">親愛的，你是否也曾有這些迷惘？<br/>讓阿蓉陪你聊聊未來</h2>
             <p className="text-lg font-light mb-10 text-morandi-dark/70 leading-relaxed">
-              規劃不需要壓力。阿蓉不推銷，只想幫妳省下不必要的開銷，建立最適合妳的防禦網。
+              規劃不需要壓力。阿蓉不推銷，只想幫你省下不必要的開銷，建立最適合你的防禦網。
             </p>
             
             <div className="inline-block bg-white/40 border border-morandi-dark/5 px-6 py-2 rounded-full mb-10 text-morandi-dark/80 font-bold tracking-widest text-xs">

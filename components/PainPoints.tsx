@@ -9,21 +9,21 @@ const PainPoints: React.FC = () => {
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "通膨讓錢變薄了？",
-      desc: "物價一年比一年貴，單純存錢已經無法守護妳的購買力。阿蓉幫妳建立抗通膨資產配置，讓妳的每一分辛苦錢不再悄悄縮水。",
+      desc: "物價一年比一年貴，單純存錢已經無法守護你的購買力。阿蓉幫你建立抗通膨資產配置，讓你的每一分辛苦錢不再悄悄縮水。",
       bgColor: 'bg-morandi-lightBlue',
       iconColor: 'text-morandi-blue'
     },
     {
       icon: <TrendingDown className="w-8 h-8" />,
       title: "退休金夠用嗎？",
-      desc: "是否擔心未來勞保破產，退休金不夠用？與其焦慮，不如現在開始規劃穩定現金流，讓以後的妳能優雅退休。",
+      desc: "是否擔心未來勞保破產，退休金不夠用？與其焦慮，不如現在開始規劃穩定現金流，讓以後的你能優雅退休。",
       bgColor: 'bg-morandi-lightCoral',
       iconColor: 'text-morandi-coral'
     },
     {
       icon: <WalletCards className="w-8 h-8" />,
       title: "錢都花到哪去了？",
-      desc: "妳是否覺得薪水很穩定，但錢好像總是不知花去哪了？阿蓉幫妳釐清財務漏水點，找回被浪費掉的隱形開支。",
+      desc: "你是否覺得薪水很穩定，但錢好像總是不知花去哪了？阿蓉幫你釐清財務漏水點，找回被浪費掉的隱形開支。",
       bgColor: 'bg-morandi-lightBlue/50',
       iconColor: 'text-morandi-dark'
     }
@@ -39,7 +39,7 @@ const PainPoints: React.FC = () => {
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="text-sm font-bold tracking-[0.4em] text-morandi-coral uppercase mb-4">Interactive Concerns</h2>
           <h3 className="text-3xl md:text-5xl font-serif font-bold text-morandi-dark mb-6 leading-tight">
-            親愛的，妳是否也曾有這些迷惘？
+            親愛的，你是否也曾有這些迷惘？
           </h3>
           <p className="text-morandi-dark/40 text-lg mb-8">點擊下方卡片，直接查看解決方案</p>
           <div className="w-16 h-1.5 bg-morandi-blue/30 rounded-full"></div>
